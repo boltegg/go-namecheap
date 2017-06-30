@@ -78,7 +78,7 @@ func (client *Client) DomainDNSSetHosts(
 
 type DomainDNSSetCustomResult struct {
 	Domain string `xml:"Domain,attr"`
-	Update bool   `xml:"Update,attr"`
+	Updated bool  `xml:"Updated,attr"`
 }
 
 func (client *Client) DomainDNSSetCustom(sld, tld, nameservers string) (*DomainDNSSetCustomResult, error) {

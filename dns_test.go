@@ -132,7 +132,7 @@ func TestDomainsDNSSetCustom(t *testing.T) {
   <Errors />
   <RequestedCommand>namecheap.domains.dns.setCustom</RequestedCommand>
   <CommandResponse Type="namecheap.domains.dns.setCustom">
-    <DomainDNSSetCustomResult Domain="domain.com" Update="true" />
+    <DomainDNSSetCustomResult Domain="domain.com" Updated="true" />
   </CommandResponse>
   <Server>SERVER-NAME</Server>
   <GMTTimeDifference>+5</GMTTimeDifference>
@@ -156,7 +156,7 @@ func TestDomainsDNSSetCustom(t *testing.T) {
 
 	want := &DomainDNSSetCustomResult{
 		Domain: "domain.com",
-		Update: true,
+		Updated: true,
 	}
 
 	if !reflect.DeepEqual(result, want) {
